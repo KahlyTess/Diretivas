@@ -1,0 +1,26 @@
+<h2> Personagens de Jojo </h2>
+<br>
+
+<ul class="Jojo's">
+  <li *ngFor="let stand of Jojo, let i = index">
+    {{ i + 1 }} - {{ stand }}
+  </li>
+</ul>
+
+
+<!-- <h5>Removendo o * e usando template</h5>
+
+<ul>
+  <li template= "ngFor let stand of Jojo, let i = index">
+    {{ i + 1 }} - {{ stand }}
+  </li>
+</ul>
+
+<ul>
+<template ngFor [ngForOf]="Jojo" let-stand let-i="index">
+  <li>
+    {{ i + 1 }} - {{ stand }}
+  </li>
+</template>
+</ul> -->
+

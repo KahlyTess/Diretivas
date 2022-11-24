@@ -1,0 +1,63 @@
+<!-- <h5>*ngIf</h5>
+
+<div *ngIf="jojo.length > 0">
+  Lista de jojo's.
+</div>
+
+<div *ngIf="jojo.length == 0">
+  não existe nenhum jojo :(
+</div> -->
+
+<!-- ////////////////////////////////////////////////////////////////////// -->
+
+<div *ngIf="mostrarJojo">
+  Lista de jojo's.
+</div>
+
+<div *ngIf="!mostrarJojo">
+  não existe nenhum jojo :(
+</div>
+
+<br>
+
+<button (click)="onMostrarJojo()">
+  Mostrar ou esconder personagens de jojo
+</button>
+
+<br>
+
+<!-- ////////////////////////////////////////////////////////////////////// -->
+
+<br>
+
+<h5>hidden como alternativa</h5>
+
+<div [hidden]="mostrarJojo">
+  Lista de jojo's.
+</div>
+
+<div [hidden]="!mostrarJojo">
+  não existe nenhum jojo :(
+</div>
+
+<br>
+
+<!-- ///////////////////////////////////////////////////////////////////////////// -->
+
+<br>
+<!--
+<h5>Removendo o * e usando template</h5>
+
+formas diferentes com a msm ação
+
+<div *ngIf="mostrarJojo">
+  Lista de jojo's.
+</div>
+
+<template [ngIf]="mostrarJojo">
+  <div>Lista de jojo's.</div>         modo do Property-Binding
+</template>
+
+<div template="ngIf mostrar cursos" >
+  Lista de jojo's.
+</div> -->

@@ -1,0 +1,34 @@
+<h5>Style com property binding (style binding)</h5>
+
+<br>
+
+<button
+[style.backgroundColor]="ativo ? 'blue' :'gray'"
+[style.color]="ativo ? 'white' : 'black'"
+[style.fontWeight]="ativo ? 'bold' : 'normal'"
+[style.fontSize]="tamanhoFonte + 'px'"
+(click)="onClick()"
+>
+
+Mudar atributo 'ativo'
+
+</button>
+
+<br><br>
+
+<h5>Style com property binding (style binding)</h5>
+
+<br>
+
+<button
+[ngStyle]="{
+  'backgroundColor': (ativa ? 'blue' :'gray'),
+  'color': (ativa ? 'white' : 'black'),
+  'fontWeight': (ativa ? 'bold' : 'normal'),
+  'fontSize': (tamanhoForte + 'px')
+}"
+
+(click)="cu()"
+>
+baitola
+</button>

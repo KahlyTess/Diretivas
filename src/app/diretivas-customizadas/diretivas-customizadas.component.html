@@ -1,0 +1,35 @@
+<p FundoAmarelo>
+  texto com fundo amarelo
+</p>
+
+<button FundoAmarelo> botão </button>
+
+<br><br>
+
+<p highlightMouse>
+  texto com highlight quando passo o mouse.
+</p>
+
+<p highlight="red" defaultColor="gray">
+  texto com highlight com cores customizadas.
+</p>
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<hr>
+
+  <h3>Diretiva Estrutura Customizada - ngElse</h3>
+
+    <div *ngIf="mostrarJojo">
+        Lista de jojo's
+    </div>
+
+    <div *ngElse="mostrarJojo">
+      Lamento, mas não existe nenhum jojo na lista por enquanto :(
+    </div>
+
+    <br>
+
+    <button (click)="onMostrarJojo()">
+      Personagens de Jojo
+    </button>

@@ -1,0 +1,25 @@
+<h1>
+  <i class="bi bi-emoji"
+  [class.bi-emoji-smile-fill]="feliz"
+  [class.bi-emoji-frown-fill]="!feliz"
+ (click)="onClick()"></i>
+</h1>
+
+<h1>
+  <i class="bi bi-emoji"
+  [ngClass]= "{
+    'bi-emoji-smile-fill': !feliz,
+    'bi-emoji-frown-fill': feliz }"
+ (click)="emo()"></i>
+</h1>
+
+
+<br><hr>
+
+
+
+
+
+
+
+

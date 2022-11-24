@@ -1,0 +1,68 @@
+<nav class="navbar navbar-dark bg-dark">
+
+    <!-- <img src="hellokitty.png" width="40" height="40" alt=""/> -->
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1024px-Angular_full_color_logo.svg.png" width="40" height="40" alt=""/>
+
+
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <span class="navbar-brand mb-0 h1">Angular</span>
+
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav"></div>
+
+   <div class="nav navbar-nav">
+        <a class="nav-item nav-link"
+        [class.active]="aba=='Home'"
+        (click)="aba = 'home'"> Home </a>
+
+        <a class="nav-item nav-link"
+        [class.active]="aba=='Features'"
+        (click)="aba = 'Features'"> Features </a>
+
+        <a class="nav-item nav-link"
+        [class.active]="aba=='Pricing'"
+        (click)="aba = 'Pricing'"> Pricing </a>
+
+        <a class="nav-item nav-link"
+        [class.active]="aba=='About'"
+        (click)="aba = 'About'"> About </a>
+  </div>
+
+</nav>
+
+<nav class="navbar navbar-dark bg-dark">
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+
+<div class="container" [ngSwitch]="aba" >
+
+  <p *ngSwitchCase="'Features'"> Ei, voce sabia?</p>
+  <p *ngSwitchCase="'Pricing'"> Que a sua mãe é uma prostituta suja, velha e moribunda?</p>
+  <p *ngSwitchCase="'About'"> Agr voce sabe :D.</p>
+
+</div>
+<!-- 
+<h5>Removendo o * e usando template</h5>
+
+<div class="container" [ngSwitch]="aba" >
+  <template [ngSwitchCase]="'Features'">
+    <p>Ei, voce sabia?</p>
+  </template>
+
+  <template [ngSwitchCase]="'Pricing'">
+    <p> Que a sua mãe é uma prostituta suja, velha e moribunda?</p>
+  </template>
+
+  <template [ngSwitchCase]="'About'">
+    <p>  Agr voce sabe :D.</p>
+  </template>
+</div> -->
